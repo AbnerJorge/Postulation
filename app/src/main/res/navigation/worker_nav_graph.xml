@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/worker_nav_graph"
+    app:startDestination="@id/workerHomeFragment">
+
+    <!-- Worker Home -->
+    <fragment
+        android:id="@+id/workerHomeFragment"
+        android:name="com.example.anuncioslaborales.view.fragment.WorkerHomeFragment"
+        android:label="Worker Home"
+        tools:layout="@layout/fragment_worker_home">
+        <action
+            android:id="@+id/action_workerHomeFragment_to_workerJobDetailFragment"
+            app:destination="@id/workerJobDetailFragment" />
+    </fragment>
+
+    <!-- Worker Job Detail -->
+    <fragment
+        android:id="@+id/workerJobDetailFragment"
+        android:name="com.example.anuncioslaborales.view.fragment.WorkerJobDetailFragment"
+        android:label="Job Detail"
+        tools:layout="@layout/fragment_worker_job_detail" />
+</navigation>
